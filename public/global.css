@@ -35,6 +35,7 @@ h1 {
 	color: var(--yellow-500);
 	font-size: 22vw;
 	max-height: min-content;
+	display: flex;
 }
 
 h6 {
@@ -51,6 +52,21 @@ p {
 a {
 	color: var(--yellow-300);
 }
+
+.loop {
+	animation-iteration-count: infinite;
+}
+
+.animate {
+	animation: flip 3s infinite;
+	animation-delay: calc(.15s * var(--i))
+}
+
+@keyframes flip {
+	0%,70% {
+	  transform: rotateY(-360deg) 
+	}
+  }
 
 .container {
 	margin: auto;
