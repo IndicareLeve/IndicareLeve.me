@@ -4,7 +4,7 @@
 			<!-- Try this for animation
 				https://codepen.io/alvarotrigo/pen/PoKMyWE -->
 			<div class="animate" style="--i:6">
-				<span>I</span>
+				<span class="magenta">i</span>
 				<span>D</span>
 			</div>
 			<div class="animate" style="--i:7">
@@ -12,15 +12,15 @@
 				<span>a</span>
 			</div>
 			<div class="animate" style="--i:8">
-				<span>d</span>
+				<span>D</span>
 				<span>n</span>
 			</div>
-			<div class="animate" style="--i:8">
+			<div  style="--i:8">
 				<span>i</span>
 				<span>i</span>
 			</div>
 			<div class="animate" style="--i:9">
-				<span>c</span>
+				<span class="magenta">C</span>
 				<span>e</span>
 			</div>
 			<div class="animate" style="--i:10">
@@ -28,30 +28,30 @@
 				<span>l</span>
 			</div>
 			<div class="animate" style="--i:11">
-				<span>r</span>
+				<span class="magenta">r</span>
 				<span>e</span>
 			</div>
 			<div class="animate" style="--i:12">
-				<span>e</span>
-				<span>C</span>
+				<span class="magenta">e</span>
+				<span class="magenta">C</span>
 			</div>
 			<div class="animate" style="--i:13">
-				<span>L</span>
-				<span>e</span>
+				<span>l</span>
+				<span class="magenta">e</span>
 			</div>
 			<div class="animate" style="--i:14">
 				<span>e</span>
-				<span>r</span>
+				<span class="magenta">r</span>
 			</div>
-			<div class="animate" style="--i:15">
-				<span>v</span>
-				<span>v</span>
+			<div  style="--i:15">
+				<span class="magenta">v</span>
+				<span class="magenta">v</span>
 			</div>
 			<div class="animate" style="--i:16">
 				<span>e</span>
-				<span>i</span>
+				<span class="magenta">i</span>
 			</div>
-			<div class="animate" style="--i:17">
+			<div  style="--i:17">
 				<span>.</span>
 				<span>.</span>
 			</div>
@@ -61,8 +61,8 @@
 		<p class="intro" transition:typewriter="{{speed: 1.5, delay: 6000}}">Geek, developer, motorcyclist, mech keyboard lover. Not necessarily in this order.</p>
 	</div>
 	<div class="work fade-in">
-		<p class="collaborate">If you'd like to collaborate on websites, integrations or anything code-related please <a href="mailto:indicareleve@gmail.com">drop me a line</a>!</p>
-		<p class="work">If you are a recruiter, you might want to <a href="https://raw.githubusercontent.com/IndicareLeve/resume/master/resume.pdf">take a look at my cv</a>.</p>
+		<p >If you'd like to collaborate on websites, integrations or anything code-related please <a href="mailto:indicareleve@gmail.com">drop me a line</a>!</p>
+		<p class="mt-1">If you are a recruiter, you might want to <a href="https://raw.githubusercontent.com/IndicareLeve/resume/master/resume.pdf">take a look at my cv</a>.</p>
 	</div>
 	<div class="social">
 		<a href="https://github.com/IndicareLeve" target="_blank">

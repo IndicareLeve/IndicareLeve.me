@@ -9,6 +9,7 @@
 	--yellow-500: #FDCA00;
 	--yellow-300: #FEE402;
 	--yellow-100: #FFFED5;
+	--magenta-500: #ff006e;
 	--black-500: #111111;
 	--black-300: #1C1C1C;
 }
@@ -42,6 +43,14 @@ h1 {
 	max-height: min-content;
 	overflow: hidden;
 	height: 10vw;
+}
+
+.magenta {
+	color: var(--magenta-500);
+}
+
+.mt-1 {
+	margin-top: 1em;
 }
 
 p {
