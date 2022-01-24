@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 * {
 	margin: 0;
 	padding: 0;
@@ -17,7 +18,7 @@ main {
 	height: 100vh;
 	display: flex;
 	color: var(--yellow-100);
-	font-family: Dongle;
+	font-family: Major Mono Display;
 }
 
 .grid {
@@ -27,44 +28,117 @@ main {
 	grid-template-areas: 
 		". header ."
 		". intro ."
-		". under-construction ."
-		". work .";
+		". work ."
+		". social .";
+}
+
+.flex {
+	display: flex;
 }
 
 h1 {
 	color: var(--yellow-500);
-	font-size: 22vw;
+	font-size: 10vw;
 	max-height: min-content;
-	display: flex;
-}
-
-h6 {
-	color: var(--yellow-300);
-	font-size: 4vw;
-	margin-top: -3.3em;
-	margin-left: 0.5em;
+	overflow: hidden;
+	height: 10vw;
 }
 
 p {
-	font-size: 18pt;
+	font-size: 14pt;
 }
 
 a {
 	color: var(--yellow-300);
 }
 
-.loop {
-	animation-iteration-count: infinite;
+.from-bottom {
+	animation: in-from-bottom 12s
+}
+
+@keyframes in-from-bottom {
+	from {
+		top: -1vw;
+	}
+	to {
+		top: 0vw;
+	}
+}
+
+.fade-in {
+	animation: fade 13s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .animate {
-	animation: flip 3s infinite;
-	animation-delay: calc(.15s * var(--i))
+	animation: flip 22s infinite;
+	animation-delay: calc(.15s * var(--i));
+
 }
 
 @keyframes flip {
-	0%,70% {
-	  transform: rotateY(-360deg) 
+	5.1% {
+		opacity: 1;
+	}
+	5.2%{
+		opacity: 0;
+	}
+	5.3% {
+		margin-top: 0vw;
+	}
+	5.4% {
+		margin-top: -10vw;
+	}
+	5.5% {
+		opacity: 0;
+	}
+	5.6%{
+		opacity: 1;
+	}
+	20% {
+		margin-top: -10vw;
+		transform: rotateY(2880deg);
+	}
+	50% {
+		margin-top: -10vw;
+		transform: rotateY(2880deg);
+	}
+	56.1% {
+		opacity: 1;
+	}
+	56.2%{
+		opacity: 0;
+	}
+	56.3% {
+		margin-top: -10vw;
+	}
+	56.4% {
+		margin-top: 0vw;
+	}
+	56.5% {
+		opacity: 0;
+	}
+	56.6%{
+		opacity: 1;
+	}
+	80% {
+		margin-top: 0vw;
+		transform: rotateY(0deg);
+	}
+	100% {
+		margin-top: 0vw;
+		transform: rotateY(0deg);
 	}
   }
 
@@ -80,6 +154,7 @@ a {
 .intro {
 	grid-area: intro;
 	text-align: center;
+	margin-top: 2em;
 }
 
 .under-construction {
@@ -95,5 +170,36 @@ a {
 .work {
 	grid-area: work;
 	text-align: center;
+	align-self: center;
 }
 
+.social {
+	align-self: end;
+	grid-area: social;
+	text-align: center;
+	color: var(--yellow-300);
+	margin-bottom: 0.5em;
+	overflow: hidden;
+	height: 1vw;
+}
+
+.social-icon {
+	fill: white;
+	cursor: pointer;
+}
+
+.facebook:hover {
+	fill: #3b5998
+}
+
+.linkedin:hover {
+	fill: #0e76a8
+}
+
+.github:hover {
+	fill: #bebfc1
+}
+
+.reddit:hover {
+	fill: #ff4500
+}
