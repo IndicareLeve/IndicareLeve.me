@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="106.46732mm"
+   height="87.773201mm"
+   viewBox="0 0 106.46732 87.773199"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="indicareleve.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="121.50986"
+     inkscape:cy="226.30408"
+     inkscape:window-width="1414"
+     inkscape:window-height="872"
+     inkscape:window-x="2565"
+     inkscape:window-y="677"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="248.16299"
+       y="322.74048"
+       width="348.45685"
+       height="249.44882"
+       id="rect7142" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-47.28867,-63.958762)">
+    <path
+       id="path846"
+       style="fill:#fdca00;stroke-width:0.172076"
+       d="M 136.08249,107.84537 A 44.396907,43.886596 0 0 1 91.685578,151.73196 44.396907,43.886596 0 0 1 47.28867,107.84537 44.396907,43.886596 0 0 1 91.685578,63.958762 44.396907,43.886596 0 0 1 136.08249,107.84537 Z" />
+    <g
+       aria-label="IL"
+       transform="matrix(0.45727304,0,0,0.46010413,-63.175284,-89.384333)"
+       id="text7140"
+       style="font-size:160px;line-height:1.25;font-family:'Major Mono Display';-inkscape-font-specification:'Major Mono Display';white-space:pre;shape-inside:url(#rect7142);fill:#ff006e">
+      <path
+         d="m 271.36211,403.54023 v -28.16 h 72 v 28.16 h -33.12 v 55.04 h 33.12 v 28.16 h -72 v -28.16 h 33.12 v -55.04 z"
+         id="path22914" />
+      <path
+         d="m 474.40207,458.42023 v 28.32 h -84.8 v -111.36 h 5.92 v 83.04 z"
+         id="path22911" />
+    </g>
+  </g>
+</svg>
