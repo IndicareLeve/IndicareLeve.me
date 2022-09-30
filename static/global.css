@@ -75,7 +75,7 @@ a {
 }
 
 .fade-in {
-	animation: fade 13s;
+	animation: fade 6s;
 }
 
 @keyframes fade {
@@ -96,6 +96,8 @@ a {
 
 }
 
+
+
 @keyframes flip {
 	5.1% {
 		opacity: 1;
@@ -104,10 +106,10 @@ a {
 		opacity: 0;
 	}
 	5.3% {
-		margin-top: 0vw;
+		margin-top: 0vh;
 	}
 	5.4% {
-		margin-top: -10vw;
+		margin-top: -10vh;
 	}
 	5.5% {
 		opacity: 0;
@@ -116,11 +118,11 @@ a {
 		opacity: 1;
 	}
 	20% {
-		margin-top: -10vw;
+		margin-top: -10vh;
 		transform: rotateY(2880deg);
 	}
 	50% {
-		margin-top: -10vw;
+		margin-top: -10vh;
 		transform: rotateY(2880deg);
 	}
 	56.1% {
@@ -130,7 +132,7 @@ a {
 		opacity: 0;
 	}
 	56.3% {
-		margin-top: -10vw;
+		margin-top: -10vh;
 	}
 	56.4% {
 		margin-top: 0vw;

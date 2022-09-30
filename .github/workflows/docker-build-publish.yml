@@ -1,0 +1,26 @@
+name: Build and Publish Docker Image
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Log in to private registry
+      uses: docker/login-action@v2
+      with:
+        registry: https://registry.indicareleve.me
+        username: ${{ INDICARELEVE_REGISTRY.username }}
+        password: ${{ INDICARELEVE_REGISTRY.password }}
+    
+    - name: Build and push
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: registry.indicareleve.me/indicareleve:latest
