@@ -19,39 +19,39 @@ jobs:
           echo $EVENT_CONTEXT
 
 
-  # docker:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - name: Generate build ID
-  #     id: prep
-  #     run: |
-  #         ts=$(date +%s)
-  #         echo "::set-output name=BUILD_ID::${ts}"        
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate build ID
+      id: prep
+      run: |
+          ts=$(date +%s)
+          echo "::set-output name=BUILD_ID::${ts}"        
 
-  #   - name: Checkout
-  #     uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
-  #   - name: Log in to private registry
-  #     uses: docker/login-action@v2
-  #     with:
-  #       registry: https://registry.indicareleve.me
-  #       username: ${{ secrets.REGISTRY_USERNAME }}
-  #       password: ${{ secrets.REGISTRY_PASSWORD }}
+    - name: Log in to private registry
+      uses: docker/login-action@v2
+      with:
+        registry: https://registry.indicareleve.me
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
     
-  #   - name: Build and push testing
-  #     if: ${{ <expression> }}
-  #     uses: docker/build-push-action@v3
-  #     with:
-  #       push: true
-  #       tags: |
-  #             ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}-testing-
-  #             ${{ env.IMAGE }}:testing
+    - name: Build and push testing
+      if: github.event_name == 'pull_request'
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: |
+              ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}-testing-${{ github.event.pull_request.head.ref }}
+              ${{ env.IMAGE }}:testing
 
-  #   - name: Build and push prod
-  #     if: ${{ <expression> }}
-  #     uses: docker/build-push-action@v3
-  #     with:
-  #       push: true
-  #       tags: |
-  #             ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
-  #             ${{ env.IMAGE }}:latest
+    - name: Build and push prod
+      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: |
+              ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
+              ${{ env.IMAGE }}:latest
