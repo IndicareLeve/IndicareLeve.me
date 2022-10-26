@@ -15,9 +15,7 @@ jobs:
     steps:
     - name: Generate build ID
       id: prep
-      run: |
-          ts=$(date +%s)
-          echo "::set-output name=BUILD_ID::${ts}"        
+      run: echo "BUILD_ID=$(date +%s)" >> $GITHUB_ENV     
 
     - name: Checkout
       uses: actions/checkout@v3
@@ -35,7 +33,7 @@ jobs:
       with:
         push: true
         tags: |
-              ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}-testing-${{ github.event.pull_request.head.ref }}
+              ${{ env.IMAGE }}:${{ env.BUILD_ID }}-testing-${{ github.event.pull_request.head.ref }}
               ${{ env.IMAGE }}:testing
 
     - name: Build and push prod
@@ -44,5 +42,5 @@ jobs:
       with:
         push: true
         tags: |
-              ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
+              ${{ env.IMAGE }}:${{ env.BUILD_ID }}
               ${{ env.IMAGE }}:latest
