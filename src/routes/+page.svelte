@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { typewriter } from "./+page";
 </script>
 
 <main class="grid">
@@ -7,15 +6,15 @@
 		<h1 class="flex">
 			<!-- Try this for animation
 				https://codepen.io/alvarotrigo/pen/PoKMyWE -->
-			<div class="animate" style="--i:6">
+			<div style="--i:6">
 				<span class="magenta">i</span>
 				<span>D</span>
 			</div>
-			<div class="animate" style="--i:7">
+			<div style="--i:7">
 				<span>n</span>
 				<span>a</span>
 			</div>
-			<div class="animate" style="--i:8">
+			<div style="--i:8">
 				<span>D</span>
 				<span>n</span>
 			</div>
@@ -23,27 +22,27 @@
 				<span>i</span>
 				<span>i</span>
 			</div>
-			<div class="animate" style="--i:9">
+			<div style="--i:9">
 				<span class="magenta">C</span>
 				<span>e</span>
 			</div>
-			<div class="animate" style="--i:10">
+			<div style="--i:10">
 				<span>a</span>
 				<span>l</span>
 			</div>
-			<div class="animate" style="--i:11">
+			<div style="--i:11">
 				<span class="magenta">r</span>
 				<span>e</span>
 			</div>
-			<div class="animate" style="--i:12">
+			<div style="--i:12">
 				<span class="magenta">e</span>
 				<span class="magenta">C</span>
 			</div>
-			<div class="animate" style="--i:13">
+			<div style="--i:13">
 				<span>l</span>
 				<span class="magenta">e</span>
 			</div>
-			<div class="animate" style="--i:14">
+			<div style="--i:14">
 				<span>e</span>
 				<span class="magenta">r</span>
 			</div>
@@ -51,7 +50,7 @@
 				<span class="magenta">v</span>
 				<span class="magenta">v</span>
 			</div>
-			<div class="animate" style="--i:16">
+			<div style="--i:16">
 				<span>e</span>
 				<span class="magenta">i</span>
 			</div>
@@ -62,18 +61,19 @@
 		</h1>
 	</div>
 	<div class="intro">
-		<p class="intro" transition:typewriter={{speed: 1.5, delay: 6000 }}>
-			Geek, developer, petrolhead, mech keyboard lover. Not necessarily in this order.
-		</p>
+		<p class="intro">GeEk • deVelopeR • PetroLhead • mecH keyboArd lover • crypto eNthusiasT</p>
+		<p>Not necessArilY in this oRder.</p>
 	</div>
-	<div class="work fade-in">
+	<div class="work">
 		<p>
-			If you'd like to collaborate on websites, integrations or anything code-related please <a
+			if you'd like to collaborate on websites, integrations or anything code-related please <a
+				class="magenta"
 				href="mailto:dan@indicareleve.me">drop me a line</a
 			>!
 		</p>
 		<p class="mt-1">
-			If you are a recruiter, you might want to <a
+			if you are a recruiter, you might want to <a
+				class="magenta"
 				href="https://raw.githubusercontent.com/IndicareLeve/resume/master/resume.pdf"
 				>take a look at my cv</a
 			>.
@@ -82,7 +82,7 @@
 	<div class="social">
 		<a href="https://github.com/IndicareLeve" target="_blank">
 			<svg
-				class="social-icon from-bottom github"
+				class="social-icon from-bottom github yellow"
 				height="24"
 				role="img"
 				viewBox="0 0 24 24"
@@ -94,7 +94,7 @@
 		</a>
 		<a href="https://www.linkedin.com/in/danielecervi/" target="_blank">
 			<svg
-				class="social-icon from-bottom linkedin"
+				class="social-icon from-bottom linkedin yellow"
 				height="24"
 				role="img"
 				viewBox="0 0 24 24"
@@ -106,7 +106,7 @@
 		</a>
 		<a href="https://www.reddit.com/u/salamadonna" target="_blank">
 			<svg
-				class="social-icon from-bottom reddit"
+				class="social-icon from-bottom reddit yellow"
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
 				viewBox="0 0 24 24"
@@ -117,7 +117,7 @@
 		</a>
 		<a href="https://www.facebook.com/IndicareLeve" target="_blank">
 			<svg
-				class="social-icon from-bottom facebook"
+				class="social-icon from-bottom facebook yellow"
 				height="24"
 				role="img"
 				viewBox="0 0 24 24"
