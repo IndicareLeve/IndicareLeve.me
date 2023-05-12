@@ -1,63 +1,159 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	const text = [
+		{
+			position: 0,
+			from: {
+				letter: 'i',
+				class: 'magenta'
+			},
+			to: {
+				letter: 'D',
+				class: 'yellow'
+			}
+		},
+		{
+			position: 1,
+			from: {
+				letter: 'n',
+				class: 'yellow'
+			},
+			to: {
+				letter: 'a',
+				class: ''
+			}
+		},
+		{
+			position: 2,
+			from: {
+				letter: 'D',
+				class: 'yellow'
+			},
+			to: {
+				letter: 'n',
+				class: 'yellow'
+			}
+		},
+		{
+			position: 4,
+			from: {
+				letter: 'C',
+				class: 'magenta'
+			},
+			to: {
+				letter: 'e',
+				class: 'yellow'
+			}
+		},
+		{
+			position: 5,
+			from: {
+				letter: 'a',
+				class: 'yellow'
+			},
+			to: {
+				letter: 'l',
+				class: 'yellow'
+			}
+		},
+		{
+			position: 6,
+			from: {
+				letter: 'r',
+				class: 'magenta'
+			},
+			to: {
+				letter: 'e',
+				class: 'yellow'
+			}
+		},
+		{
+			position: 7,
+			from: {
+				letter: 'e',
+				class: 'magenta'
+			},
+			to: {
+				letter: 'C',
+				class: 'magenta'
+			}
+		},
+		{
+			position: 8,
+			from: {
+				letter: 'l',
+				class: 'yellow'
+			},
+			to: {
+				letter: 'e',
+				class: 'magenta'
+			}
+		},
+		{
+			position: 9,
+			from: {
+				letter: 'e',
+				class: 'yellow'
+			},
+			to: {
+				letter: 'r',
+				class: 'magenta'
+			}
+		},
+		{
+			position: 11,
+			from: {
+				letter: 'e',
+				class: 'yellow'
+			},
+			to: {
+				letter: 'i',
+				class: 'magenta'
+			}
+		}
+	];
+
+	const chars = '!<>-_\\/[]{}—=+*^?#________';
+	const next = () => {
+		console.clear();
+		let items = Array.from(document.querySelectorAll('.flex div'));
+		let toSwitch = text;
+		while (toSwitch.length > 0) {
+			let rnd = Math.floor(Math.random() * toSwitch.length);
+			console.log('pos: ' + rnd);
+			let item = toSwitch[rnd];
+			toSwitch = toSwitch.filter((i) => i.position !== item.position);
+			items[item.position].className = item.to.class;
+			items[item.position].innerHTML = item.to.letter;
+			console.log('class: ' + items[item.position].className);
+		}
+	};
+
+	onMount(() => {
+		next();
+		// setInterval(() => {
+		// 	next();
+		// }, 3000);
+	});
 </script>
 
 <main class="grid">
 	<div class="header">
 		<h1 class="flex">
-			<!-- Try this for animation
-				https://codepen.io/alvarotrigo/pen/PoKMyWE -->
-			<div style="--i:6">
-				<span class="magenta">i</span>
-				<span>D</span>
-			</div>
-			<div style="--i:7">
-				<span>n</span>
-				<span>a</span>
-			</div>
-			<div style="--i:8">
-				<span>D</span>
-				<span>n</span>
-			</div>
-			<div style="--i:8">
-				<span>i</span>
-				<span>i</span>
-			</div>
-			<div style="--i:9">
-				<span class="magenta">C</span>
-				<span>e</span>
-			</div>
-			<div style="--i:10">
-				<span>a</span>
-				<span>l</span>
-			</div>
-			<div style="--i:11">
-				<span class="magenta">r</span>
-				<span>e</span>
-			</div>
-			<div style="--i:12">
-				<span class="magenta">e</span>
-				<span class="magenta">C</span>
-			</div>
-			<div style="--i:13">
-				<span>l</span>
-				<span class="magenta">e</span>
-			</div>
-			<div style="--i:14">
-				<span>e</span>
-				<span class="magenta">r</span>
-			</div>
-			<div style="--i:15">
-				<span class="magenta">v</span>
-				<span class="magenta">v</span>
-			</div>
-			<div style="--i:16">
-				<span>e</span>
-				<span class="magenta">i</span>
-			</div>
-			<div style="--i:17">
-				<span>.</span>
-				<span>.</span>
-			</div>
+			<div class="magenta">i</div>
+			<div class="yellow">n</div>
+			<div class="yellow">D</div>
+			<div class="yellow">i</div>
+			<div class="magenta">C</div>
+			<div class="yellow">a</div>
+			<div class="magenta">r</div>
+			<div class="magenta">e</div>
+			<div class="yellow">l</div>
+			<div class="yellow">e</div>
+			<div class="magenta">v</div>
+			<div class="yellow">e</div>
+			<div class="yellow">.</div>
 		</h1>
 	</div>
 	<div class="intro">
