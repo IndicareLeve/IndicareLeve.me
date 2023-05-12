@@ -11,6 +11,7 @@
 	--yellow-300: #FEE402;
 	--yellow-100: #FFFED5;
 	--magenta-500: #ff006e;
+	--gray-500: #757575;
 	--black-500: #111111;
 	--black-300: #1C1C1C;
 	--background: #212121;
@@ -50,6 +51,10 @@ h1 {
 
 .magenta {
 	color: var(--magenta-500);
+}
+
+.gray {
+	color: var(--gray-500);
 }
 
 .mt-1 {

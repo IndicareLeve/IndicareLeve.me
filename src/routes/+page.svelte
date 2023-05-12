@@ -115,27 +115,57 @@
 	];
 
 	const chars = '!<>-_\\/[]{}—=+*^?#________';
-	const next = () => {
-		console.clear();
+
+	async function switchName(realName: boolean) {
 		let items = Array.from(document.querySelectorAll('.flex div'));
 		let toSwitch = text;
 		while (toSwitch.length > 0) {
 			let rnd = Math.floor(Math.random() * toSwitch.length);
-			console.log('pos: ' + rnd);
 			let item = toSwitch[rnd];
 			toSwitch = toSwitch.filter((i) => i.position !== item.position);
-			items[item.position].className = item.to.class;
-			items[item.position].innerHTML = item.to.letter;
-			console.log('class: ' + items[item.position].className);
-		}
-	};
 
-	onMount(() => {
-		next();
-		// setInterval(() => {
-		// 	next();
-		// }, 3000);
+			//make it gray and scramble the chars
+			let name = realName ? item.to : item.from;
+			setTimeout(async () => {
+				await scrambleChar(items[item.position], name.letter, name.class);
+			}, Math.random() * 2000);
+		}
+	}
+
+	async function scrambleChar(el: Element, to: string, className: string) {
+		el.className = 'gray';
+		let iterations = Math.random() * chars.length;
+		for (let i = 0; i < iterations; i++) {
+			el.innerHTML = await getNextLetter(Math.random() * 250);
+		}
+
+		el.innerHTML = to;
+		el.className = className;
+	}
+
+	function getNextLetter(delay: number): Promise<string> {
+		return new Promise((resolve) => {
+			let letter = '';
+			setTimeout(() => {
+				letter = chars[Math.floor(Math.random() * chars.length)];
+				resolve(letter);
+			}, delay);
+		});
+	}
+
+	onMount(async () => {
+		let realName = true;
+		setTimeout(() => {
+			switchName(true);
+			realName = !realName;
+		}, 2000);
+		setInterval(() => {
+			switchName(false);
+			realName = !realName;
+		}, 10000);
 	});
+
+	console.log('made with just a few swears by a backend guy :)');
 </script>
 
 <main class="grid">
@@ -157,8 +187,8 @@
 		</h1>
 	</div>
 	<div class="intro">
-		<p class="intro">GeEk • deVelopeR • PetroLhead • mecH keyboArd lover • crypto eNthusiasT</p>
-		<p>Not necessArilY in this oRder.</p>
+		<p class="intro">GeEk • deVelOpeR • PetroLhead • mecH keyBoArd lover • crypto eNthusiasT</p>
+		<p>Not necessArilY in this oRDer.</p>
 	</div>
 	<div class="work">
 		<p>
