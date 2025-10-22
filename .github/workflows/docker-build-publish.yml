@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: https://container-registry.indicareleve.me
-  IMAGE: registry.indicareleve.me/indicareleve
+  IMAGE: container-registry.indicareleve.me/indicareleve
 
 # Security: Restrict permissions to minimum required
 permissions:
