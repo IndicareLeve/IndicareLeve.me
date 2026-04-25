@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY: https://container-registry.indicareleve.me
-  IMAGE: container-registry.indicareleve.me/indicareleve
+  REGISTRY: https://registry.indicareleve.me
+  IMAGE: registry.indicareleve.me/indicareleve
 
 # Security: Restrict permissions to minimum required
 permissions:
